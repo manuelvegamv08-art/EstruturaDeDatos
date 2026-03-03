@@ -8,12 +8,15 @@
 
 
 
-
+import java.util.Scanner;
 public class Arrays_ejerci_4 {
 
     public static void main(String[] args) {
         int [] codigosAccesor = {1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010};
-        int codigoSocio = 1005;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese su código de acceso: ");
+        int codigoSocio = scanner.nextInt();
         int inicio = 0;
         int fin = codigosAccesor.length - 1;
         boolean encontrado = false;
@@ -32,6 +35,7 @@ public class Arrays_ejerci_4 {
         if (!encontrado) {
             System.out.println("Acceso denegado. Código no válido.");
         }
-
+        
+        scanner.close();
     }
 }

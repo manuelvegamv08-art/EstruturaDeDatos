@@ -17,11 +17,14 @@ public class Arrays_ejerci_4 {
 
         System.out.print("Ingrese su código de acceso: ");
         int codigoSocio = scanner.nextInt();
+
         int inicio = 0;
         int fin = codigosAccesor.length - 1;
         boolean encontrado = false;
+
         while (inicio <= fin) {
             int medio = (inicio + fin) / 2;
+            
             if (codigosAccesor[medio] == codigoSocio) {
                 System.out.println("Acceso permitido. Bienvenido al gimnasio.");
                 encontrado = true;

@@ -73,6 +73,5 @@ public class Inspertor_5 {
             System.out.println("Ambos métodos tuvieron la misma eficiencia para estos datos.");
         }
         scanner.close();
-    }
-        
+    }        
 }

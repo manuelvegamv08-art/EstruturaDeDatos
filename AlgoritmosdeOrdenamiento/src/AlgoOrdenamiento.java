@@ -22,7 +22,7 @@ public class AlgoOrdenamiento {
         for (int i = 0; i < cantidadLibros; i++) {
             codigosISBN[i] = scanner.nextInt();
         }   
-        // Insertion Sort
+        
         for (int i = 1; i < codigosISBN.length; i++) {
             int key = codigosISBN[i];
             int j = i - 1;

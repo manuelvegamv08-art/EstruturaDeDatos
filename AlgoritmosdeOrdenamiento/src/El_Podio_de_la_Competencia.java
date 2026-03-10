@@ -1,6 +1,7 @@
 // 1.Algoritmo obligatorio: Ordenamiento por Selección (Selection Sort)
 
-// Contexto: Se ha realizado una carrera de 100 metros planos y el comité olímpico necesita determinar
+// Contexto: Se ha realizado una carrera de 100 metros planos y el 
+// comité olímpico necesita determinar
 // quiénes ganaron las medallas.
 // Detalle del ejercicio: El programa debe solicitar primero cuántos corredores participaron (ej. 5 a 10). 
 // Luego, debe pedir el tiempo en segundos (con decimales) de cada corredor.
@@ -29,14 +30,14 @@ public class El_Podio_de_la_Competencia {
         }
 
         double[] tiempos = new double[numCorredores];
-        int[] corredores = new int[numCorredores]; // guarda número del corredor
+        int[] corredores = new int[numCorredores];
 
-        // Inicializar números de corredor
+        
         for (int i = 0; i < numCorredores; i++) {
             corredores[i] = i + 1;
         }
 
-        // Ingreso de tiempos con validación
+        
         for (int i = 0; i < numCorredores; i++) {
 
             while (true) {
@@ -48,7 +49,7 @@ public class El_Podio_de_la_Competencia {
 
                 } catch (Exception e) {
                     System.out.println("Error: Debe ingresar un número válido.");
-                    scanner.next(); // limpiar entrada incorrecta
+                    scanner.next(); 
                 }
 
             }

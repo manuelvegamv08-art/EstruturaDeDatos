@@ -31,7 +31,7 @@ public class AlgoOrdenamiento {
                 j--;
             }
             codigosISBN[j + 1] = key;
-            // Visualización paso a paso
+           
             System.out.print("Paso " + i + ": ");
             for (int k = 0; k < codigosISBN.length; k++) {
                 System.out.print(codigosISBN[k] + " ");

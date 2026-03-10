@@ -29,12 +29,12 @@ public class Inspertor_5 {
         }
         // Copia del arreglo original para ambos métodos
         int[] numerosSeleccion = numeros.clone();
-        int[] numerosInsercion = numeros.clone();   
+        int[] numerosinsertados = numeros.clone();   
         // Contadores
         int intercambiosSeleccion = 0;
         int movimientosInsercion = 0;   
-
-        // SELECTION SORT con conteo de intercambios
+       
+        // SELECTION SORT
         for (int i = 0; i < numerosSeleccion.length - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < numerosSeleccion.length; j++) {
@@ -50,18 +50,18 @@ public class Inspertor_5 {
                 intercambiosSeleccion++;
             }
         }
-        // INSERTION SORT con conteo de movimientos
-        for (int i = 1; i < numerosInsetados.length; i++) {
-            int key = numerosInserc[i];
+        // INSERTION SORT
+        for (int i = 1; i < numerosinsertados.length; i++) {
+            int key = numerosinsertados[i];
             int j = i - 1;
-            while (j >= 0 && numerosInsercion[j] > key) {
-                numerosInsertado[j + 1] = numerosInsetado[j];
+            while (j >= 0 && numerosinsertados[j] > key) {
+                numerosinsertados[j + 1] = numerosinsertados[j];
                 j--;
                 movimientosInsercion++;
             }
-            numerosInsercion[j + 1] = key;
+            numerosinsertados[j + 1] = key;
         }
-       
+        // Resultados
         System.out.println("\nResultados:");
         System.out.println("Selección hizo " + intercambiosSeleccion + " intercambios.");
         System.out.println("Inserción hizo " + movimientosInsercion + " movimientos.");
@@ -74,6 +74,5 @@ public class Inspertor_5 {
         }
         scanner.close();
     }
-
         
 }

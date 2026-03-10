@@ -15,14 +15,30 @@ public class Araays_busqueda_2 {
         ventas[3] = 2100.00;
         ventas[4] = 1950.75;
 
-        double VentaMaxima;
-        double VentaMinima;
+        double VentaMaxima = 0;
+        double VentaMinima = 0;
         double SumaVentas = 0;
         for (int i = 0; i < ventas.length; i++) {
-            SumaVentas += ventas[i];
-            
-            
+            SumaVentas += ventas[i];  
         }
+        for (int i = 0; i < ventas.length; i++){
+            if (i == 0) {
+                VentaMaxima = ventas[i];
+                VentaMinima = ventas[i];
+            } else {
+                if (ventas[i] > VentaMaxima) {
+                    VentaMaxima = ventas[i];
+                }
+                if (ventas[i] < VentaMinima) {
+                    VentaMinima = ventas[i];
+                }
+            }
+        }
+        double promedioVentas = SumaVentas / ventas.length;
+        
         System.out.println("Suma total de ventas: " + SumaVentas);
+        System.out.println("Venta más alta: " + VentaMaxima);
+        System.out.println("Venta más baja: " + VentaMinima);
+        System.out.println("Promedio de ventas: " + promedioVentas);
     }   
 }

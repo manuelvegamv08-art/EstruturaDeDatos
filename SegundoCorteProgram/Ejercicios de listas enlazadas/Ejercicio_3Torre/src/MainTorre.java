@@ -14,52 +14,47 @@ import java.util.Scanner;
 
 public class MainTorre {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         GestionVuelos torre = new GestionVuelos();
-        String opcion;
+        int opcion;
 
         do {
             System.out.println("\n--- TORRE DE CONTROL ---");
-            System.out.println("1. Registrar llegada de vuelo (al final)");
-            System.out.println("2. Reportar Emergencia (Mover al inicio)");
-            System.out.println("3. Ver cola de aterrizaje");
+            System.out.println("1. Registrar Vuelo");
+            System.out.println("2. Reportar Emergencia");
+            System.out.println("3. Ver Cola de Aterrizaje");
             System.out.println("4. Salir");
             System.out.print("Seleccione: ");
-            opcion = sc.nextLine();
+            opcion = Integer.parseInt(teclado.nextLine());
 
-            switch(opcion) {
-                case "1":
-                    System.out.print("Número de Vuelo: ");
-                    String num = sc.nextLine();
-                    System.out.print("Aerolínea: ");
-                    String aero = sc.nextLine();
-                    System.out.print("Combustible: ");
-                    int comb = Integer.parseInt(sc.nextLine());
-                    System.out.print("Pasajeros: ");
-                    int pas = Integer.parseInt(sc.nextLine());
-                    
-                    Vuelo nuevo = new Vuelo(num, aero, comb, pas);
-                    torre.agregarVuelo(nuevo);
-                    
-                    // Verificación automática de combustible bajo
-                    if(comb < 10) {
-                        System.out.println("Alerta: Combustible bajo. Reubicando...");
-                        torre.reportarEmergencia(num);
-                    }
-                    break;
+            if (opcion == 1) {
+                System.out.print("Número de vuelo: ");
+                String n = teclado.nextLine();
+                System.out.print("Aerolínea: ");
+                String a = teclado.nextLine();
+                System.out.print("Combustible: ");
+                int c = Integer.parseInt(teclado.nextLine());
+                System.out.print("Pasajeros: ");
+                int p = Integer.parseInt(teclado.nextLine());
 
-                case "2":
-                    System.out.print("Ingrese el número de vuelo en emergencia: ");
-                    String emergencia = sc.nextLine();
-                    torre.reportarEmergencia(emergencia);
-                    break;
+                torre.agregarVuelo(n, a, c, p);
+                
+                // Automatización: Si entra con poco combustible, moverlo ya
+                if (c < 10) {
+                    torre.moverAlInicio(n);
+                }
 
-                case "3":
-                    torre.mostrarCola();
-                    break;
+            } else if (opcion == 2) {
+                System.out.print("Ingrese número de vuelo en emergencia: ");
+                String emer = teclado.nextLine();
+                torre.moverAlInicio(emer);
+
+            } else if (opcion == 3) {
+                torre.mostrarCola();
             }
-        } while (!opcion.equals("4"));
+
+        } while (opcion != 4);
         
-        sc.close();
+        System.out.println("Sistema apagado.");
     }
 }

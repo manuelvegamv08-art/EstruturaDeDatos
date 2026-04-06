@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 public class MainTorre {
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         GestionVuelos torre = new GestionVuelos();
         int opcion;
 
@@ -25,17 +25,17 @@ public class MainTorre {
             System.out.println("3. Ver Cola de Aterrizaje");
             System.out.println("4. Salir");
             System.out.print("Seleccione: ");
-            opcion = Integer.parseInt(teclado.nextLine());
+            opcion = Integer.parseInt(scanner.nextLine());
 
             if (opcion == 1) {
                 System.out.print("Número de vuelo: ");
-                String n = teclado.nextLine();
+                String n = scanner.nextLine();
                 System.out.print("Aerolínea: ");
-                String a = teclado.nextLine();
+                String a = scanner.nextLine();
                 System.out.print("Combustible: ");
-                int c = Integer.parseInt(teclado.nextLine());
+                int c = Integer.parseInt(scanner.nextLine());
                 System.out.print("Pasajeros: ");
-                int p = Integer.parseInt(teclado.nextLine());
+                int p = Integer.parseInt(scanner.nextLine());
 
                 torre.agregarVuelo(n, a, c, p);
                 
@@ -46,7 +46,7 @@ public class MainTorre {
 
             } else if (opcion == 2) {
                 System.out.print("Ingrese número de vuelo en emergencia: ");
-                String emer = teclado.nextLine();
+                String emer = scanner.nextLine();
                 torre.moverAlInicio(emer);
 
             } else if (opcion == 3) {
@@ -56,5 +56,7 @@ public class MainTorre {
         } while (opcion != 4);
         
         System.out.println("Sistema apagado.");
+        scanner.close();
     }
+    
 }

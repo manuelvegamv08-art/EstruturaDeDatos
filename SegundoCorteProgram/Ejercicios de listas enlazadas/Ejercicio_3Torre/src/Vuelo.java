@@ -12,8 +12,7 @@ public class Vuelo {
         this.aeroLinea = aeroLinea;
         this.combustibleRestante = combustibleRestante;
         this.pasajeros = pasajeros;
-        this.siguiente = null;
-        
+        this.siguiente = null;    
 
     }
 

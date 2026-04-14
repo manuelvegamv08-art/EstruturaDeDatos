@@ -15,11 +15,7 @@ public class Pestana {
     }
 
     public void mostrar() {
-        System.out.println(
-            "Título: " + tituloPagina +
-            " | URL: " + url +
-            " | Hora: " + horaApertura
-        );
+        System.out.println("Título: " + tituloPagina +" | URL: " + url +" | Hora: " + horaApertura);
     }
 }
 

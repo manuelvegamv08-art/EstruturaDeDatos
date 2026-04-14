@@ -16,17 +16,19 @@ public class Galeria {
     // =============================
     public void agregarFoto(String nombre, double tamano, String resolucion) {
 
-        Fotografia nueva = new fotografia(nombre, resolucion, tamano);
+        Fotografia nueva = new Fotografia(nombre, resolucion, tamano);
 
-        if (inicio == null) {
-            inicio = nueva;
-            fin = nueva;
-            actual = nueva;
-        } else {
-            fin.siguiente = nueva;
-            nueva.anterior = fin;
-            fin = nueva;
-        }
+        
+    if (inicio == null) {
+        inicio = nueva;
+        fin = nueva;
+        actual = nueva;
+    } else {
+        fin.siguiente = nueva;
+        nueva.anterior = fin;
+        fin = nueva;
+    }
+}
     
     // SIGUIENTE FOTO
     public void siguienteFoto() {

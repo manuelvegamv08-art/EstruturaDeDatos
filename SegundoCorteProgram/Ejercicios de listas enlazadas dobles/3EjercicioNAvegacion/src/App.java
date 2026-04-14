@@ -14,7 +14,7 @@ public class App {
             System.out.println("2. Mostrar pestañas abiertas");
             System.out.println("3. Cerrar pestaña por URL");
             System.out.println("4. Salir");
-            System.out.print("Seleccione una opción: ");
+            System.out.print("Seleccione una opcion: ");
 
             opcion = teclado.nextInt();
             teclado.nextLine(); 
@@ -22,7 +22,7 @@ public class App {
             switch (opcion) {
 
                 case 1:
-                    System.out.print("Título de la página: ");
+                    System.out.print("Título de la pagina: ");
                     String titulo = teclado.nextLine();
 
                     System.out.print("URL: ");
@@ -52,7 +52,7 @@ public class App {
                     break;
 
                 default:
-                    System.out.println(" Opción inválida.");
+                    System.out.println(" Opcion invalida.");
             }
 
         } while (opcion != 4);

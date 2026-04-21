@@ -1,7 +1,4 @@
-public class Navegador {
-
-    
-
+public class Navegador {  
     private Pestana inicio;
     private Pestana fin;
     private Pestana actual;

@@ -1,0 +1,56 @@
+public class Estacion {
+
+    private String nombrePunto;
+    private int profundidad;
+    private double nivelOxigeno;
+
+    private Estacion siguiente;
+
+    // Constructor
+    public Estacion(
+            String nombrePunto,
+            int profundidad,
+            double nivelOxigeno
+    ) {
+
+        this.nombrePunto = nombrePunto;
+        this.profundidad = profundidad;
+        this.nivelOxigeno = nivelOxigeno;
+
+        this.siguiente = null;
+    }
+
+    // GETTERS
+
+    public String getNombrePunto() {
+        return nombrePunto;
+    }
+
+    public int getProfundidad() {
+        return profundidad;
+    }
+
+    public double getNivelOxigeno() {
+        return nivelOxigeno;
+    }
+
+    public Estacion getSiguiente() {
+        return siguiente;
+    }
+
+    // SETTERS
+
+    public void setSiguiente(Estacion siguiente) {
+        this.siguiente = siguiente;
+    }
+
+    @Override
+    public String toString() {
+
+        return "Estacion{" +
+                "nombrePunto='" + nombrePunto + '\'' +
+                ", profundidad=" + profundidad +
+                ", nivelOxigeno=" + nivelOxigeno +
+                '}';
+    }
+}
